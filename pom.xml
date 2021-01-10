@@ -50,6 +50,22 @@
           </excludes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>2.5.0</version>
+        <configuration>
+          <from>
+            <image>gcr.io/distroless/java:11</image>
+          </from>
+          <to>
+            <image>gcr.io/PROJECT_ID/demo</image>
+            <tags>
+              <tag>latest</tag>
+            </tags>
+          </to>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
