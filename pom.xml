@@ -42,6 +42,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
+          <image>
+            <name>gcr.io/PROJECT_ID/demo</name>
+            <env>
+              <BP_BOOT_NATIVE_IMAGE>true</BP_BOOT_NATIVE_IMAGE>
+            </env>
+          </image>
           <excludes>
             <exclude>
               <groupId>org.projectlombok</groupId>
@@ -68,5 +74,52 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <id>native-image</id>
+      <build>
+        <plugins>
+         <plugin>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-maven-plugin</artifactId>
+           <executions>
+             <execution>
+               <goals>
+                 <goal>build-image</goal>
+               </goals>
+               <phase>package</phase>
+             </execution>
+           </executions>
+         </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <id>jib-image</id>
+      <build>
+        <plugins>
+         <plugin>
+           <groupId>com.google.cloud.tools</groupId>
+           <artifactId>jib-maven-plugin</artifactId>
+           <executions>
+             <execution>
+               <goals>
+                 <goal>build</goal>
+               </goals>
+               <phase>package</phase>
+             </execution>
+           </executions>
+         </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
