@@ -1,0 +1,31 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: native
+  labels:
+    cloud.googleapis.com/location: europe-west4
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+    spec:
+      containerConcurrency: 30
+      timeoutSeconds: 30
+      containers:
+        - image: gcr.io/planar-effect-301315/demo:native
+          ports:
+            - containerPort: 8080
+#          livenessProbe:
+#            httpGet:
+#              path: /actuator/health
+#          readinessProbe:
+#            httpGet:
+#              path: /actuator/health
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 256Mi
