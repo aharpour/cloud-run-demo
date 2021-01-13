@@ -16,7 +16,7 @@ spec:
       containerConcurrency: 30
       timeoutSeconds: 30
       containers:
-        - image: gcr.io/planar-effect-301315/demo:native
+        - image: gcr.io/PROJECT_ID/demo:native-${hash}
           ports:
             - containerPort: 8080
 #          livenessProbe:

@@ -43,11 +43,31 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
+        <version>4.0.0</version>
+        <executions>
+          <execution>
+            <inherited>true</inherited>
+            <phase>initialize</phase>
+            <goals>
+              <goal>revision</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+          <generateGitPropertiesFile>false</generateGitPropertiesFile>
+          <offline>true</offline>
+          <skipPoms>false</skipPoms>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
           <image>
-            <name>gcr.io/PROJECT_ID/demo:native</name>
+            <name>gcr.io/PROJECT_ID/demo:native-${git.commit.id.abbrev}</name>
             <env>
               <BP_BOOT_NATIVE_IMAGE>true</BP_BOOT_NATIVE_IMAGE>
             </env>
@@ -72,6 +92,7 @@
             <image>gcr.io/PROJECT_ID/demo</image>
             <tags>
               <tag>jib</tag>
+              <tag>jib-${git.commit.id.abbrev}</tag>
             </tags>
           </to>
         </configuration>

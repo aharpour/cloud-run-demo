@@ -42,3 +42,6 @@ buildNumber.properties
 .mvn
 mvnw
 mvnw.cmd
+
+# Deplyment script
+service.yaml
