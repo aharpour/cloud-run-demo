@@ -43,7 +43,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
           <image>
-            <name>gcr.io/PROJECT_ID/demo</name>
+            <name>gcr.io/PROJECT_ID/demo:native</name>
             <env>
               <BP_BOOT_NATIVE_IMAGE>true</BP_BOOT_NATIVE_IMAGE>
             </env>
@@ -67,7 +67,7 @@
           <to>
             <image>gcr.io/PROJECT_ID/demo</image>
             <tags>
-              <tag>latest</tag>
+              <tag>jib</tag>
             </tags>
           </to>
         </configuration>
