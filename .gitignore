@@ -45,3 +45,6 @@ mvnw.cmd
 
 # Deplyment script
 service.yaml
+
+# Native tracer Agent
+/META-INF/native-image
