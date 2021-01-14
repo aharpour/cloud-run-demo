@@ -1,0 +1,113 @@
+[
+  {
+    "name":"java.security.AlgorithmParametersSpi"
+  },
+  {
+    "name":"java.security.AllPermission"
+  },
+  {
+    "name":"java.security.MessageDigestSpi"
+  },
+  {
+    "name":"java.security.SecureClassLoader",
+    "allDeclaredMethods":true
+  },
+  {
+    "name":"java.security.SecureRandomParameters"
+  },
+  {
+    "name":"java.security.SecurityPermission"
+  },
+  {
+    "name":"java.security.interfaces.ECPrivateKey"
+  },
+  {
+    "name":"java.security.interfaces.ECPublicKey"
+  },
+  {
+    "name":"java.security.interfaces.RSAPrivateKey"
+  },
+  {
+    "name":"java.security.interfaces.RSAPublicKey"
+  },
+  {
+    "name":"com.sun.crypto.provider.AESCipher$General",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.sun.crypto.provider.DHParameters",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.sun.crypto.provider.HmacCore$HmacSHA256",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.sun.crypto.provider.TlsMasterSecretGenerator",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.DRBG",
+    "methods":[{"name":"<init>","parameterTypes":["java.security.SecureRandomParameters"] }]
+  },
+  {
+    "name":"sun.security.provider.DSA$SHA224withDSA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.DSA$SHA256withDSA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA2$SHA224",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA2$SHA256",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA5$SHA384",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA5$SHA512",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.X509Factory",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.rsa.RSAKeyFactory$Legacy",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.rsa.RSAPSSSignature",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.rsa.RSASignature$SHA224withRSA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.ssl.KeyManagerFactoryImpl$SunX509",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.ssl.SSLContextImpl$TLSContext",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.x509.BasicConstraintsExtension",
+    "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+  }
+]

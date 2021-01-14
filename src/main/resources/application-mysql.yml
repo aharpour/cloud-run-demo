@@ -1,30 +1,15 @@
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3307/website?useSSL=true&verifyServerCertificate=false&useUnicode=true&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: website
     password: password
-    hikari:
-      poolName: Hikari
-      auto-commit: false
+    initialization-mode: never
+
   jpa:
     database: MYSQL
-    show-sql: false
-    generate-ddl: false
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
+    open-in-view: false
     properties:
-      hibernate.id.new_generator_mappings: true
-      hibernate.connection.provider_disables_autocommit: false
-      hibernate.cache.use_second_level_cache: false
-      hibernate.cache.use_query_cache: false
-      hibernate.generate_statistics: false
-      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
-      # modify batch size as necessary
-      hibernate.jdbc.batch_size: 25
-      hibernate.order_inserts: true
-      hibernate.order_updates: true
-      hibernate.query.fail_on_pagination_over_collection_fetch: true
-      hibernate.query.in_clause_parameter_padding: true
-      hibernate:
-        format_sql: false
+      hibernate.temp.use_jdbc_metadata_defaults: false
