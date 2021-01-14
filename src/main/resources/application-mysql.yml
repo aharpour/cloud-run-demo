@@ -7,9 +7,9 @@ spring:
 
   jpa:
     database: MYSQL
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     open-in-view: false
     properties:
       hibernate.temp.use_jdbc_metadata_defaults: false
