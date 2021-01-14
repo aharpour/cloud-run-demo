@@ -162,6 +162,33 @@
         </dependency>
       </dependencies>
     </profile>
+    <profile>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <id>native-image-dependency-hack</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.experimental</groupId>
+          <artifactId>spring-graalvm-native</artifactId>
+          <version>0.8.5</version>
+        </dependency>
+      </dependencies>
+      <repositories>
+        <repository>
+          <id>spring-milestones</id>
+          <name>Spring Milestones</name>
+          <url>https://repo.spring.io/milestone</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>spring-milestones</id>
+          <name>Spring Milestones</name>
+          <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
   </profiles>
 
 </project>
