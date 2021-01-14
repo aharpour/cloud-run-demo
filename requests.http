@@ -1,0 +1,25 @@
+// Get greeting page
+GET http://localhost:8080
+Accept: application/json
+
+###
+// Get persion
+GET http://localhost:8080/person
+Accept: application/json
+
+###
+POST http://localhost:8080/person/create
+Content-Type: application/json
+
+{ "name" : "Carl Friedrich", "surname": "Gauss" }
+###
+POST http://localhost:8080/person/create
+Content-Type: application/json
+
+{ "name" : "David", "surname": "Hilbert" }
+###
+POST http://localhost:8080/person/create
+Content-Type: application/json
+
+{ "name" : "Évariste", "surname": "Galois" }
+###
